@@ -1,0 +1,85 @@
+﻿<Window x:Class="Dictionary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dictionary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="684" Width="1143">
+    <Grid Margin="0,0,0,-21">
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="31" Margin="21,8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="620" Background="White" Foreground="Black" FontSize="16"/>
+        <Button x:Name="buttonSearch" Content="Search" HorizontalAlignment="Left" Margin="670,8,0,0" VerticalAlignment="Top" Width="121" Click="button_Click" Height="31"/>
+
+
+
+        <TextBox x:Name="textBoxTermin" HorizontalAlignment="Left" Height="31" Margin="23,509,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" FontSize="16"/>
+        <TextBox x:Name="textBoxDescription" HorizontalAlignment="Left" Height="31" Margin="244,509,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="749" FontSize="16"/>
+        <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="109,555,0,0" VerticalAlignment="Top" Width="105" Height="26" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonEdit" Content="Edit" HorizontalAlignment="Left" Margin="244,555,0,0" VerticalAlignment="Top" Width="103" Height="26" Click="buttonEdit_Click"/>
+        <Button x:Name="buttonRemove" Content="Remove" HorizontalAlignment="Left" Margin="244,599,0,0" VerticalAlignment="Top" Width="103" Height="31" Click="buttonRemove_Click"/>
+        <TextBox x:Name="textBoxDelete" HorizontalAlignment="Left" Height="31" Margin="23,599,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" FontSize="16"/>
+        <ListView x:Name="listView" 
+                  HorizontalAlignment="Left" 
+                  Height="394" Margin="21,85,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="1064"
+                  FontSize="16" SelectionChanged="listView_SelectionChanged"
+                  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Termin" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock TextWrapping="WrapWithOverflow"  Text="{Binding termin}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Description" Width="880">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock TextWrapping="WrapWithOverflow"  Text="{Binding description}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="button1" Content="А" HorizontalAlignment="Left" Margin="21,54,0,0" VerticalAlignment="Top" Width="21" Height="24" Background="White" BorderBrush="White" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Б" HorizontalAlignment="Left" Margin="42,54,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="White" Click="button2_Click"/>
+        <Button x:Name="button3" Content="В" HorizontalAlignment="Left" Margin="66,54,0,0" VerticalAlignment="Top" Width="20" Height="24" Background="White" BorderBrush="White" Click="button3_Click"/>
+        <Button x:Name="button4" Content="Г" HorizontalAlignment="Left" Margin="86,54,0,0" VerticalAlignment="Top" Width="21" Height="24" Background="White" BorderBrush="White" Click="button4_Click"/>
+        <Button x:Name="button5" Content="Д" HorizontalAlignment="Left" Margin="107,54,0,0" VerticalAlignment="Top" Width="22" Height="24" Background="White" BorderBrush="White" Click="button5_Click"/>
+        <Button x:Name="button6" Content="Е" HorizontalAlignment="Left" Margin="129,54,0,0" VerticalAlignment="Top" Width="22" Height="24" Background="White" BorderBrush="White" Click="button6_Click"/>
+        <Button x:Name="button7" Content="Ж" HorizontalAlignment="Left" Margin="151,54,0,0" VerticalAlignment="Top" Width="29" Height="24" Background="White" BorderBrush="White" Click="button7_Click"/>
+        <Button x:Name="button8" Content="З" HorizontalAlignment="Left" Margin="180,54,0,0" VerticalAlignment="Top" Width="22" Height="24" Background="White" BorderBrush="White" Click="button8_Click"/>
+        <Button x:Name="button9" Content="И" HorizontalAlignment="Left" Margin="202,54,0,0" VerticalAlignment="Top" Width="21" Height="24" Background="White" BorderBrush="White" Click="button9_Click"/>
+        <Button x:Name="button10" Content="Й" HorizontalAlignment="Left" Margin="223,54,0,0" VerticalAlignment="Top" Width="22" Height="24" Background="White" BorderBrush="White" RenderTransformOrigin="9.694,0.519" Click="button10_Click"/>
+        <Button x:Name="button11" Content="К" HorizontalAlignment="Left" Margin="245,54,0,0" VerticalAlignment="Top" Width="21" Height="24" Background="White" BorderBrush="White" Click="button11_Click"/>
+        <Button x:Name="button12" Content="Л" HorizontalAlignment="Left" Margin="266,54,0,0" VerticalAlignment="Top" Width="22" Height="24" Background="White" BorderBrush="White" Click="button12_Click"/>
+        <Button x:Name="button13" Content="М" HorizontalAlignment="Left" Margin="288,54,0,0" VerticalAlignment="Top" Width="27" Height="24" Background="White" BorderBrush="White" Click="button13_Click"/>
+        <Button x:Name="button14" Content="Н" HorizontalAlignment="Left" Margin="315,54,0,0" VerticalAlignment="Top" Width="21" Height="24" Background="White" BorderBrush="White" Click="button14_Click"/>
+        <Button x:Name="button15" Content="О" HorizontalAlignment="Left" Margin="336,54,0,0" VerticalAlignment="Top" Width="25" Height="24" Background="White" BorderBrush="White" Click="button15_Click"/>
+        <Button x:Name="button16" Content="П" HorizontalAlignment="Left" Margin="361,54,0,0" VerticalAlignment="Top" Width="21" Height="24" Background="White" BorderBrush="White" RenderTransformOrigin="16.167,0.648" Click="button16_Click"/>
+        <Button x:Name="button17" Content="Р" HorizontalAlignment="Left" Margin="382,54,0,0" VerticalAlignment="Top" Width="22" Height="24" Background="White" BorderBrush="White" Click="button17_Click"/>
+        <Button x:Name="button18" Content="С" HorizontalAlignment="Left" Margin="404,54,0,0" VerticalAlignment="Top" Width="22" Height="24" Background="White" BorderBrush="White" Click="button18_Click"/>
+        <Button x:Name="button19" Content="Т" HorizontalAlignment="Left" Margin="426,54,0,0" VerticalAlignment="Top" Width="20" Height="24" Background="White" BorderBrush="White" Click="button19_Click"/>
+        <Button x:Name="button20" Content="У" HorizontalAlignment="Left" Margin="446,54,0,0" VerticalAlignment="Top" Width="20" Height="24" Background="White" BorderBrush="White" Click="button20_Click"/>
+        <Button x:Name="button21" Content="Ф" HorizontalAlignment="Left" Margin="466,54,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="White" Click="button21_Click"/>
+        <Button x:Name="button22" Content="Х" HorizontalAlignment="Left" Margin="490,54,0,0" VerticalAlignment="Top" Width="21" Height="24" Background="White" BorderBrush="White" Click="button22_Click"/>
+        <Button x:Name="button23" Content="Ц" HorizontalAlignment="Left" Margin="511,54,0,0" VerticalAlignment="Top" Width="20" Height="24" Background="White" BorderBrush="White" Click="button23_Click"/>
+        <Button x:Name="button24" Content="Ч" HorizontalAlignment="Left" Margin="531,54,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="White" Click="button24_Click"/>
+        <Button x:Name="button25" Content="Ш" HorizontalAlignment="Left" Margin="555,54,0,0" VerticalAlignment="Top" Width="31" Height="24" Background="White" BorderBrush="White" Click="button25_Click"/>
+        <Button x:Name="button26" Content="Щ" HorizontalAlignment="Left" Margin="586,54,0,0" VerticalAlignment="Top" Width="30" Height="24" Background="White" BorderBrush="White" Click="button26_Click"/>
+        <Button x:Name="button27" Content="Э" HorizontalAlignment="Left" Margin="616,54,0,0" VerticalAlignment="Top" Width="20" Height="24" Background="White" BorderBrush="White" Click="button26_Click"/>
+        <Button x:Name="button28" Content="Ю" HorizontalAlignment="Left" Margin="636,54,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="White" Click="button26_Click"/>
+        <Button x:Name="button29" Content="Я" HorizontalAlignment="Left" Margin="660,54,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="White" Click="button26_Click"/>
+        <Button x:Name="Backup1" Content="Backup1" HorizontalAlignment="Left" Margin="551,555,0,0" VerticalAlignment="Top" Width="87" Height="26" RenderTransformOrigin="0.486,-0.548" Click="Backup1_Click"/>
+        <Button x:Name="Backup2" Content="Backup2" HorizontalAlignment="Left" Margin="551,612,0,0" VerticalAlignment="Top" Width="87" Height="26" RenderTransformOrigin="0.486,-0.548" Click="Backup2_Click"/>
+        <Button x:Name="RestoreDefault" Content="RestoreDefault" HorizontalAlignment="Left" Margin="909,612,0,0" VerticalAlignment="Top" Width="86" Height="26" RenderTransformOrigin="0.486,-0.548" Click="RestoreDefault_Click"/>
+        <Button x:Name="Restoreback1" Content="RestoreBackup1" HorizontalAlignment="Left" Margin="704,555,0,0" VerticalAlignment="Top" Width="105" Height="26" RenderTransformOrigin="0.486,-0.548" Click="Backup3_Click"/>
+        <Button x:Name="Restoreback2" Content="RestoreBackup2" HorizontalAlignment="Left" Margin="704,612,0,0" VerticalAlignment="Top" Width="105" Height="26" RenderTransformOrigin="0.486,-0.548" Click="Backup4_Click"/>
+
+    </Grid>
+</Window>
